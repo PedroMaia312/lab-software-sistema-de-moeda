@@ -20,9 +20,8 @@ COPY --from=builder /app/target/sistema-moeda-backend-1.0.0.jar app.jar
 # Expõe a porta padrão do Spring Boot
 EXPOSE 8080
 
-# Configura variáveis de ambiente para o MySQL (dentro do docker-compose)
-ENV SPRING_DATASOURCE_URL=jdbc:mysql://db:3306/sistema_moeda?createDatabaseIfNotExist=true&useSSL=false&useTimezone=true&serverTimezone=UTC&allowPublicKeyRetrieval=true
-ENV SPRING_DATASOURCE_USERNAME=root
-ENV SPRING_DATASOURCE_PASSWORD=root
+ENV SPRING_DATASOURCE_URL=jdbc:postgresql://senhorjesus:hPv9rXigYPyJkq2CPawhN4EzXIrpZvyS@dpg-d4kacvvgi27c73ckkgvg-a.oregon-postgres.render.com/sistema_moeda_banco
+ENV SPRING_DATASOURCE_USERNAME=senhorjesus
+ENV SPRING_DATASOURCE_PASSWORD=hPv9rXigYPyJkq2CPawhN4EzXIrpZvyS
 
 ENTRYPOINT ["java", "-jar", "app.jar"]
