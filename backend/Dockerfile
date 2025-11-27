@@ -24,4 +24,8 @@ ENV SPRING_DATASOURCE_URL=jdbc:postgresql://dpg-d4kacvvgi27c73ckkgvg-a.oregon-po
 ENV SPRING_DATASOURCE_USERNAME=senhorjesus
 ENV SPRING_DATASOURCE_PASSWORD=hPv9rXigYPyJkq2CPawhN4EzXIrpZvyS
 
+ENV SPRING_JPA_HIBERNATE_DDL_AUTO=update
+ENV SPRING_JPA_SHOW_SQL=true
+ENV SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT=org.hibernate.dialect.PostgreSQLDialect
+
 ENTRYPOINT ["java", "-jar", "app.jar"]
