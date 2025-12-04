@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: sistema-moeda-backend
+    env: docker
+    plan: free
+    autoDeploy: true
+
+    envVars:
+      # DATABASE -------------------------
+      - key: SPRING_DATASOURCE_URL
+        value: jdbc:postgresql://dpg-d4kacvvgi27c73ckkgvg-a.oregon-postgres.render.com:5432/sistema_moeda_banco
+
+      - key: SPRING_DATASOURCE_USERNAME
+        value: senhorjesus
+
+      - key: SPRING_DATASOURCE_PASSWORD
+        value: hPv9rXigYPyJkq2CPawhN4EzXIrpZvyS
+
+      # EMAIL ----------------------------
+      - key: MAIL_USERNAME
+        value: arthurpedrasantana@gmail.com
+
+      - key: MAIL_PASSWORD
+        value: vicfvqlcpyzuvtib
