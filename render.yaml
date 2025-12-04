@@ -7,17 +7,17 @@ services:
     autoDeploy: true
 
     envVars:
-      # DATABASE -------------------------
+      # DATABASE (Neon) -------------------------
       - key: SPRING_DATASOURCE_URL
-        value: jdbc:postgresql://dpg-d4kacvvgi27c73ckkgvg-a.oregon-postgres.render.com:5432/sistema_moeda_banco
+        value: jdbc:postgresql://ep-calm-cake-aeeg1sxq-pooler.c-2.us-east-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require
 
       - key: SPRING_DATASOURCE_USERNAME
-        value: senhorjesus
+        value: neondb_owner
 
       - key: SPRING_DATASOURCE_PASSWORD
-        value: hPv9rXigYPyJkq2CPawhN4EzXIrpZvyS
+        value: npg_6PyZC1DsjxEJ
 
-      # EMAIL ----------------------------
+      # EMAIL ------------------------------------
       - key: MAIL_USERNAME
         value: arthurpedrasantana@gmail.com
 
