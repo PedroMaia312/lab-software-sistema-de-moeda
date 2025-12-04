@@ -3,6 +3,7 @@ services:
     name: sistema-moeda-backend
     env: docker
     plan: free
+    rootDir: backend
     autoDeploy: true
 
     envVars:
